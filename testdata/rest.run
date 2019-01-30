@@ -1,0 +1,23 @@
+# get languages
+GET http://localhost:9998/languages
+Accept-Encoding: gzip
+
+# post data
+POST http://localhost:9998/profile
+Accept-Encoding: gzip
+Content-Type: application/json; charset=utf-8
+
+{
+	"Language": "german",
+	"Tokens": [
+		{"OCR": "Boden"},
+		{"OCR": "Aventinus"},
+		{"OCR": "Bodens"},
+		{"OCR": "Serr"}
+	]
+}
+
+# get profile
+:token = ZzNGebSujGgzCxTT
+GET http://localhost:9998/profile?token=:token
+Accept-Encoding: gzip
